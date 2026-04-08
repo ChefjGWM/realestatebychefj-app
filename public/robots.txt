@@ -1,0 +1,7 @@
+# Real Estate by Chef J — Buyer & Seller Tools
+# Allow all crawlers.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://tools.realestatebychefj.com/sitemap.xml

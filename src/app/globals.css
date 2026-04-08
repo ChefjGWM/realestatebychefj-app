@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f5f0e8;
+  --foreground: #1a1a2e;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+}
+
+/* ─── Desktop: center the app with subtle pattern ─────────────────────── */
+@media (min-width: 1024px) {
+  body {
+    background-color: #e9e0cf;
+    background-image:
+      radial-gradient(rgba(11, 31, 58, 0.055) 1px, transparent 1px),
+      radial-gradient(rgba(201, 160, 82, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px, 28px 28px;
+    background-position: 0 0, 14px 14px;
+  }
+  .app-shell {
+    max-width: 680px;
+    margin: 0 auto;
+    min-height: 100vh;
+    box-shadow: 0 0 60px rgba(11, 31, 58, 0.18);
+  }
+}
+
+/* ─── Sticky header (tab navigation) ──────────────────────────────────── */
+.resp-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* ─── Tablet: 640–1023px — collapse 3+ col grids to 2 col ─────────────── */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .resp-form [style*="grid-template-columns: 1fr 1fr 1fr"],
+  .resp-form [style*="grid-template-columns: repeat(5,1fr)"],
+  .resp-form [style*="grid-template-columns: repeat(5, 1fr)"],
+  .resp-form [style*="grid-template-columns:repeat(5,1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ─── Mobile: <640px — stack everything to one column ─────────────────── */
+@media (max-width: 639px) {
+  /* Collapse any inline-styled grid inside .resp-form to a single column,
+     except descendants of .resp-table-scroll (which scrolls horizontally). */
+  .resp-form [style*="grid-template-columns"]:not(.resp-table-scroll *) {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 44px min tap targets */
+  .resp-form button,
+  .resp-form input,
+  .resp-form select,
+  .resp-tabs button,
+  .resp-form textarea {
+    min-height: 44px;
+  }
+
+  /* Larger, readable tab bar with generous tap area */
+  .resp-tabs {
+    padding-bottom: 2px;
+  }
+  .resp-tabs button {
+    font-size: 13px !important;
+    padding: 12px 14px !important;
+    min-width: 96px;
+  }
+
+  /* Seller net sheet: horizontal scroll wrapper (no squish) */
+  .resp-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .resp-table-scroll > * {
+    min-width: 620px;
+  }
+
+  /* Desktop shell has no max-width constraint on mobile */
+  .app-shell {
+    max-width: 100%;
+  }
+}
+
+/* ─── Hide horizontal scrollbar on tab bar (all breakpoints) ──────────── */
+.resp-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
