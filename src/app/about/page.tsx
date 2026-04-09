@@ -13,6 +13,24 @@ export const metadata: Metadata = {
       "About Home Buyer Tools — a free toolkit of calculators for home buyers and sellers by Chef J.",
     url: "https://tools.realestatebychefj.com/about",
     type: "website",
+    // Defining a child openGraph here would otherwise drop the auto-injected
+    // /opengraph-image. Reference it explicitly so /about shares with the
+    // same branded preview as the home page.
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Home Buyer Tools | Real Estate by Chef J",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Real Estate by Chef J",
+    description:
+      "About Home Buyer Tools — a free toolkit of calculators for home buyers and sellers by Chef J.",
+    images: ["/opengraph-image"],
   },
 };
 
