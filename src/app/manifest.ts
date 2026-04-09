@@ -40,5 +40,24 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "maskable",
       },
     ],
+    // Android Chrome "long-press shortcut" menu from the installed app icon.
+    // Lets the agent jump straight to the CRM without going through the
+    // buyer toolkit login first.
+    shortcuts: [
+      {
+        name: "Home Buyer Tools",
+        short_name: "Buyer Tools",
+        description: "Mortgage, DTI, closing costs, and more calculators.",
+        url: "/",
+        icons: [{ src: "/apple-icon", sizes: "180x180", type: "image/png" }],
+      },
+      {
+        name: "Agent CRM",
+        short_name: "CRM",
+        description: "Sign in to view client DTI, budget, and registrations.",
+        url: "/admin",
+        icons: [{ src: "/admin/apple-icon", sizes: "180x180", type: "image/png" }],
+      },
+    ],
   };
 }
