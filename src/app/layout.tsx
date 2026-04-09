@@ -62,6 +62,10 @@ export const metadata: Metadata = {
     // when metadata.icons.icon is present.
     apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
   },
+  // PWA manifest — served as a static file from /public so that child
+  // route segments (like /admin) can override with their own manifest via
+  // metadata cascading. The file-convention manifest.ts won't let that happen.
+  manifest: "/manifest.webmanifest",
   // PWA — "Add to Home Screen" experience on iOS Safari.
   appleWebApp: {
     capable: true,

@@ -1,0 +1,26 @@
+{
+  "name": "Real Estate by Chef J — Agent CRM",
+  "short_name": "Chef J CRM",
+  "description": "Agent dashboard for viewing client DTI, budget, and registrations.",
+  "start_url": "/admin",
+  "scope": "/admin",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#c9a052",
+  "theme_color": "#0b1f3a",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/admin/apple-icon",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

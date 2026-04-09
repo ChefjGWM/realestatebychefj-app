@@ -1,0 +1,49 @@
+{
+  "name": "Real Estate by Chef J — Home Buyer Tools",
+  "short_name": "Chef J Tools",
+  "description": "Free mortgage, DTI, closing cost, down payment & seller net sheet calculators.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0b1f3a",
+  "theme_color": "#0b1f3a",
+  "categories": ["finance", "business", "productivity"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-icon",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Home Buyer Tools",
+      "short_name": "Buyer Tools",
+      "description": "Mortgage, DTI, closing costs, and more calculators.",
+      "url": "/",
+      "icons": [{ "src": "/apple-icon", "sizes": "180x180", "type": "image/png" }]
+    },
+    {
+      "name": "Agent CRM",
+      "short_name": "CRM",
+      "description": "Sign in to view client DTI, budget, and registrations.",
+      "url": "/admin",
+      "icons": [{ "src": "/admin/apple-icon", "sizes": "180x180", "type": "image/png" }]
+    }
+  ]
+}

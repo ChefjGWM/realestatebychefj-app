@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     follow: false,
   },
   alternates: { canonical: "/admin" },
+  // Route-specific PWA manifest so iOS "Add to Home Screen" from /admin
+  // installs with start_url: /admin (the agent CRM login), NOT the root /
+  // (the client buyer login). Without this override, tapping the installed
+  // admin tile would launch the client toolkit instead.
+  manifest: "/admin-manifest.webmanifest",
   openGraph: {
     title: "Agent CRM | Real Estate by Chef J",
     description: "Private agent dashboard.",
