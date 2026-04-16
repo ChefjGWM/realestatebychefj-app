@@ -45,7 +45,7 @@ export default function CRMDashboard({ onClose }) {
 
   return (
     <div style={{ minHeight: "100vh", background: T.cream, fontFamily: sans }}>
-      <div style={{ background: T.navy, padding: "20px 22px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div style={{ background: T.navy, paddingTop: "max(24px, env(safe-area-inset-top, 24px))", paddingBottom: 16, paddingLeft: 22, paddingRight: 22, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div>
           <div style={{ fontSize: 9, letterSpacing: 3, textTransform: "uppercase", color: T.gold }}>Real Estate by Chef J</div>
           <div style={{ fontSize: 22, fontFamily: serif, fontWeight: 700, color: T.white }}>Agent CRM</div>

@@ -112,7 +112,7 @@ export default function App() {
 
   return (
     <div className="app-shell" style={{ minHeight: "100vh", background: T.cream, fontFamily: sans }}>
-      <div className="resp-sticky" style={{ background: T.navy, padding: "16px 16px 0", overflow: "hidden", position: "sticky", top: 0, zIndex: 50 }}>
+      <div className="resp-sticky" style={{ background: T.navy, paddingTop: "max(24px, env(safe-area-inset-top, 24px))", paddingBottom: 0, paddingLeft: 16, paddingRight: 16, overflow: "hidden", position: "sticky", top: 0, zIndex: 50 }}>
         <div style={{ position: "absolute", top: -40, right: -30, width: 160, height: 160, borderRadius: "50%", background: "rgba(201,160,82,0.07)", pointerEvents: "none" }} />
         <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 14, gap: 10 }}>
           <div style={{ minWidth: 0 }}>

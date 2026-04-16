@@ -704,7 +704,7 @@ function LoginScreen({ onLogin }) {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: T.navy, display: "flex", alignItems: "center", justifyContent: "center", padding: 20, fontFamily: sans }}>
+    <div style={{ minHeight: "100vh", background: T.navy, display: "flex", alignItems: "center", justifyContent: "center", padding: "max(40px, env(safe-area-inset-top, 40px)) 20px 40px", fontFamily: sans }}>
       <div style={{ width: "100%", maxWidth: 420 }}>
         <div style={{ textAlign: "center", marginBottom: 28 }}>
           <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", color: T.gold, marginBottom: 6 }}>Real Estate by Chef J</div>
@@ -771,7 +771,7 @@ function CRMDashboard({ onClose }) {
 
   return (
     <div style={{ minHeight: "100vh", background: T.cream, fontFamily: sans }}>
-      <div style={{ background: T.navy, padding: "20px 22px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div style={{ background: T.navy, paddingTop: "max(24px, env(safe-area-inset-top, 24px))", paddingBottom: 16, paddingLeft: 22, paddingRight: 22, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div>
           <div style={{ fontSize: 9, letterSpacing: 3, textTransform: "uppercase", color: T.gold }}>Real Estate by Chef J</div>
           <div style={{ fontSize: 22, fontFamily: serif, fontWeight: 700, color: T.white }}>Agent CRM</div>
@@ -1086,7 +1086,7 @@ function SellerNetSheet({ onClose }) {
   return (
     <div style={{ minHeight: "100vh", background: T.cream, fontFamily: sans }}>
       {/* Header */}
-      <div style={{ background: T.navy, padding: "18px 18px 16px", position: "relative", overflow: "hidden" }}>
+      <div style={{ background: T.navy, paddingTop: "max(28px, env(safe-area-inset-top, 28px))", paddingBottom: 16, paddingLeft: 18, paddingRight: 18, position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: -30, right: -20, width: 140, height: 140, borderRadius: "50%", background: "rgba(201,160,82,0.07)", pointerEvents: "none" }} />
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 10 }}>
           <div>
@@ -1096,7 +1096,7 @@ function SellerNetSheet({ onClose }) {
             </div>
             <div style={{ fontSize: 11, color: "#7a8eaa", marginTop: 3, fontFamily: sans }}>See your estimated proceeds at 3 different sale prices</div>
           </div>
-          <button onClick={onClose} style={{ background: "rgba(255,255,255,0.1)", border: "none", borderRadius: 8, padding: "8px 14px", color: T.white, fontSize: 12, fontFamily: sans, cursor: "pointer", flexShrink: 0 }}>
+          <button onClick={onClose} style={{ background: "linear-gradient(135deg, #c9a052, #e8c97a)", border: "none", borderRadius: 8, padding: "8px 14px", color: "#0b1f3a", fontSize: 12, fontFamily: sans, fontWeight: 700, cursor: "pointer", flexShrink: 0 }}>
             ← Buyer Tools
           </button>
         </div>
@@ -1300,7 +1300,7 @@ export default function App() {
     <div style={{ minHeight: "100vh", background: T.cream, fontFamily: sans }}>
       {showAdminLogin && <AdminLogin onSuccess={() => { setShowAdminLogin(false); setShowCRM(true); }} onCancel={() => setShowAdminLogin(false)} />}
 
-      <div style={{ background: T.navy, padding: "16px 16px 0", overflow: "hidden", position: "relative" }}>
+      <div style={{ background: T.navy, paddingTop: "max(24px, env(safe-area-inset-top, 24px))", paddingBottom: 0, paddingLeft: 16, paddingRight: 16, overflow: "hidden", position: "relative" }}>
         <div style={{ position: "absolute", top: -40, right: -30, width: 160, height: 160, borderRadius: "50%", background: "rgba(201,160,82,0.07)", pointerEvents: "none" }} />
         <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 14, gap: 10 }}>
           <div style={{ minWidth: 0 }}>
